@@ -1,23 +1,28 @@
+package linkedlists;
 
-public class NodeV1<Item> {
+
+public class NodeV2<Item> {
     Item data;
-    NodeV1 next = null;
+    NodeV2 next = null;
 
     public static void main(String args[]) {
-        NodeV1 n = new NodeV1(5);
-        n.add(4).add(7).add(2).add(6);
-
+        NodeV2 n = new NodeV2(5);
+        n.addToEnd(3);
+        n.addToEnd(4);
+        n.addToEnd(2);
         System.out.println(n);
     }
 
-    public NodeV1(Item data) {
+    public NodeV2(Item data) {
         this.data = data;
     }
-
-    public NodeV1 add(Item data) {
-        NodeV1 n = new NodeV1(data);
-        this.next = n;
-        return n;
+    public void addToEnd(Item data) {
+        NodeV2 end = new NodeV2(data);
+        NodeV2 current = this;
+        while(current.next != null) {
+            current = current.next;
+        }
+        current.next = end;
     }
 
     @Override

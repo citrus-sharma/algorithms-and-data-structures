@@ -1,8 +1,9 @@
 package linkedlists;
 
-public class NodeV1<T> {
-    T data;
-    NodeV1 next = null;
+
+public class NodeV1 {
+    public int data;
+    public NodeV1 next = null;
 
     public static void main(String args[]) {
         NodeV1 n = new NodeV1(5);
@@ -11,15 +12,16 @@ public class NodeV1<T> {
         System.out.println(n);
     }
 
-    public NodeV1(T data) {
+    public NodeV1(int data) {
         this.data = data;
     }
 
-    public NodeV1 add(T data) {
+    public NodeV1 add(int data) {
         NodeV1 n = new NodeV1(data);
         this.next = n;
         return n;
     }
+
 
     @Override
     public String toString() {
