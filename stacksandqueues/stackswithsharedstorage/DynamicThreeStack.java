@@ -1,4 +1,6 @@
-package stacksandqueues;
+package stacksandqueues.stackswithsharedstorage;
+
+import stacksandqueues.StackNode;
 
 import java.util.HashSet;
 import java.util.Set;

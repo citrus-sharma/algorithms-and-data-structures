@@ -1,4 +1,4 @@
-package stacksandqueues;
+package stacksandqueues.stackswithsharedstorage;
 
 import java.util.Scanner;
 
