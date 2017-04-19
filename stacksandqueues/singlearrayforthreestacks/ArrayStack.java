@@ -1,4 +1,4 @@
-package stacksandqueues.arraystack;
+package stacksandqueues.singlearrayforthreestacks;
 
 public class ArrayStack {
     int [] arr;

@@ -10,6 +10,10 @@ public class BinarySearchTree {
     TreeNode lastGuy = null;
     private int counter = 0;
 
+    public TreeNode getRoot() {
+        return root;
+    }
+
     public void replaceElementWithSuccessor() {
         replaceElementWithSuccessor(root);
     }
@@ -62,7 +66,8 @@ public class BinarySearchTree {
 
     public TreeNode searchValue(TreeNode node, int value) {
         if(node == null) {
-            System.out.println("value not found");
+            //System.out.println("value not found");
+            return null;
         }
         if(node.getValue() == value) {
             //System.out.println("value found" + value);
@@ -241,4 +246,5 @@ public class BinarySearchTree {
         }
         return Math.max(getHeight(node.getLeft()), getHeight(node.getRight())) + 1;
     }
+
 }

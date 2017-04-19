@@ -10,9 +10,9 @@ public class InOrderTraversal {
         if(node == null) {
             return;
         }
-
+        System.out.println(" node being traversed " + node.getValue());
         displayInOrderTraversal(node.getLeft());
-        System.out.print(node.getValue() + " ");
+        //System.out.print(node.getValue() + " ");
         displayInOrderTraversal(node.getRight());
     }
 }

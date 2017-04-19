@@ -2,26 +2,28 @@ package linkedlists;
 
 
 public class NodeV1 {
-    public int data;
-    public NodeV1 next = null;
+    private int data;
+    private NodeV1 next = null;
 
-    public static void main(String args[]) {
-        NodeV1 n = new NodeV1(5);
-        n.add(4).add(7).add(2).add(6);
+    public int getData() {
+        return data;
+    }
 
-        System.out.println(n);
+    public void setData(int data) {
+        this.data = data;
+    }
+
+    public NodeV1 getNext() {
+        return next;
+    }
+
+    public void setNext(NodeV1 next) {
+        this.next = next;
     }
 
     public NodeV1(int data) {
         this.data = data;
     }
-
-    public NodeV1 add(int data) {
-        NodeV1 n = new NodeV1(data);
-        this.next = n;
-        return n;
-    }
-
 
     @Override
     public String toString() {

@@ -16,7 +16,7 @@ public class Stack {
         if(top == null) {
             top = n;
         }else {
-            n.next = top;
+            n.setNext(top);
             top = n;
         }
         size ++;
@@ -27,9 +27,9 @@ public class Stack {
             throw new Exception("underflow");
         }
         NodeV1 result = top;
-        top = top.next;
+        top = top.getNext();
         size--;
-        return result.data;
+        return result.getData();
     }
 
     public boolean isEmpty() {
@@ -47,8 +47,8 @@ public class Stack {
     public void diplayStack() {
         NodeV1 tempTop = top;
         while (tempTop != null) {
-            System.out.print(tempTop.data + " ");
-            tempTop = tempTop.next;
+            System.out.print(tempTop.getData() + " ");
+            tempTop = tempTop.getNext();
         }
     }
 }

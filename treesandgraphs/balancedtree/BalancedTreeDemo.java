@@ -23,7 +23,7 @@ public class BalancedTreeDemo {
         //right1.setLeft(rightLeft);
         right1.setRight(rightRight);
 
-        BalancedTree balancedTree = new BalancedTree();
+        BalancedTreeValidator balancedTree = new BalancedTreeValidator();
         int maxHeight = balancedTree.getMaxHeight(treeNode);
         System.out.println(maxHeight);
 

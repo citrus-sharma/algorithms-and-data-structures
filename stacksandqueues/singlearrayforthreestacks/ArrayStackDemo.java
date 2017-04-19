@@ -1,4 +1,4 @@
-package stacksandqueues.arraystack;
+package stacksandqueues.singlearrayforthreestacks;
 
 import java.util.ArrayList;
 import java.util.List;

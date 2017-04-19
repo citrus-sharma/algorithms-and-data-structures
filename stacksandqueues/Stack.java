@@ -4,8 +4,11 @@ import linkedlists.NodeV1;
 
 public class Stack {
     NodeV1 top = null;
-    Stack minStack = null;
+    public Stack minStack = null;
 
+    public NodeV1 getTop() {
+        return top;
+    }
 
     public NodeV1 pop() throws Exception {
         if(isEmpty()) {
@@ -14,22 +17,22 @@ public class Stack {
         NodeV1 result = top;
         deleteFromMinStack(result);
 
-        top = top.next;
+        top = top.getNext();
         return result;
     }
 
     private void deleteFromMinStack(NodeV1 node) throws Exception{
-        if(minStack.top.data == node.data) {
-            minStack.top = minStack.top.next;
+        if(minStack.top.getData() == node.getData()) {
+            minStack.top = minStack.top.getNext();
         }
     }
 
     private void pushToMinStack(NodeV1 node) {
-        NodeV1 n = new NodeV1(node.data);
+        NodeV1 n = new NodeV1(node.getData());
         if(minStack.top == null) {
             minStack.top = n;
-        }else if(node.data <= minStack.top.data){
-            n.next = minStack.top;
+        }else if(node.getData() <= minStack.top.getData()){
+            n.setNext(minStack.top);
             minStack.top = n;
         }
     }
@@ -39,7 +42,7 @@ public class Stack {
         if(top == null) {
             top = n;
         }else {
-            n.next = top;
+            n.setNext(top);
             top = n;
         }
         pushToMinStack(n);
@@ -49,7 +52,7 @@ public class Stack {
         if(minStack == null) {
            throw new Error("no min element found");
         }
-        return minStack.top.data;
+        return minStack.top.getData();
     }
 
     public boolean isEmpty() {
